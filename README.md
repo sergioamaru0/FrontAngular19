@@ -1,59 +1,73 @@
-# UserFront
+# Frontend con Angular para la Aplicación de Usuarios
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Este proyecto es un frontend desarrollado con Angular que consume un microservicio creado con Node.js y Express (Parte 1). Permite obtener datos de usuarios desde el backend y mostrarlos en un formulario dinámico.
 
-## Development server
+---
 
-To start a local development server, run:
+## Características
+- **Consumo de API REST** utilizando el módulo `HttpClient` de Angular.
+- Renderización dinámica de los usuarios obtenidos desde el backend.
+- Formulario que permite visualizar y editar los datos de los usuarios en tiempo real.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Funcionalidades
+- Solicitar los datos de los usuarios mediante una petición `GET` al endpoint del backend.
+- Mostrar cada usuario en una fila del formulario con sus datos:
+  - Nombre
+  - Correo
+  - Edad
+- Interfaz sencilla y responsive basada en Bootstrap o CSS personalizado.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Requisitos Previos
+1. **Node.js** (v14 o superior).
+2. **Angular CLI** instalado globalmente:
+   ```bash
+   npm install -g @angular/cli
+   ```
+3. **Backend** en ejecución (ver Parte 1 del proyecto).
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Configuración e Instalación
 
-```bash
-ng generate --help
-```
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/tu-repo-frontend.git
+   cd tu-repo-frontend
+   ```
 
-## Building
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-To build the project run:
+3. Configura el archivo `environment.ts` con la URL del backend:
+   ```typescript
+   export const environment = {
+     production: false,
+     apiUrl: 'http://localhost:3000/api' // URL del backend
+   };
+   ```
 
-```bash
-ng build
-```
+4. Inicia el servidor de desarrollo:
+   ```bash
+   ng serve
+   ```
+   El frontend estará disponible en `http://localhost:4200`.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Ejemplo Visual
 
-```bash
-ng test
-```
+![image](https://github.com/user-attachments/assets/a648b105-8692-470e-853b-4231fc2c2875)
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Autor
+**Sergio Andrés Bareño**
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
